@@ -28,7 +28,7 @@ class _AboutContainerState extends State<AboutContainer> {
           AnimatedPositioned(
             duration: const Duration(milliseconds: 300),
             left: _isToggled ? ((screenWidth/2) - 120) : (screenWidth/2) - 31,  // Adjusted for centering
-            top: screenHeight/8 + -35,
+            top: screenHeight/8 - 42,
             child: const CircleAvatar(
               maxRadius: 30,
               minRadius: 20,
@@ -41,7 +41,7 @@ class _AboutContainerState extends State<AboutContainer> {
           AnimatedPositioned(
             duration: const Duration(milliseconds: 300),
             left: _isToggled ? ((screenWidth/2) + 60) : (screenWidth/2) - 31, // Adjusted for centering
-            top: screenHeight/8 - 35,
+            top: screenHeight/8 - 42,
             child: GestureDetector(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const About()));
@@ -56,20 +56,18 @@ class _AboutContainerState extends State<AboutContainer> {
               ),
             ),
           ),
-          Center(
-            child: AnimatedPositioned(
-              duration: const Duration(milliseconds: 300),
-              left: _isToggled ? 0 : 0,  // Adjusted for centering
-              top: _isToggled ? 0 : 0,    // Adjusted for centering
-              child: GestureDetector(
-                onTap: _toggleAvatar,
-                child: const CircleAvatar(
-                  maxRadius: 30,
-                  minRadius: 20,
-                  child: Icon(
-                    Icons.center_focus_strong,
-                    size: 40,
-                  ),
+          AnimatedPositioned(
+            duration: const Duration(milliseconds: 300),
+            left: (screenWidth/2) - 31,  // Adjusted for centering
+            top: screenHeight/8 - 42,    // Adjusted for centering
+            child: GestureDetector(
+              onTap: _toggleAvatar,
+              child: const CircleAvatar(
+                maxRadius: 30,
+                minRadius: 20,
+                child: Icon(
+                  Icons.center_focus_strong,
+                  size: 40,
                 ),
               ),
             ),

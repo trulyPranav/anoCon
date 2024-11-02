@@ -1,3 +1,5 @@
+import 'package:anon_service/widgets/callerWidgets/caller.dart';
+import 'package:anon_service/widgets/callerWidgets/text_placer.dart';
 import 'package:flutter/material.dart';
 
 class CallPlacer extends StatefulWidget {
@@ -10,6 +12,12 @@ class CallPlacer extends StatefulWidget {
 class _CallPlacerState extends State<CallPlacer> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        TextPlacer(),
+        Caller(),
+      ],
+    );
   }
 }

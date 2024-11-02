@@ -19,11 +19,11 @@ class _TalkScreenState extends State<TalkScreen> {
         body: Column(
           children: [
             Expanded(
-              flex: 1,
+              flex: 2,
               child: IntroContainer()
             ),
             SizedBox(
-              height: 20,
+              height: 5,
             ),
             Expanded(
               flex: 8,
