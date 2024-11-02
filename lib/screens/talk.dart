@@ -13,24 +13,24 @@ class TalkScreen extends StatefulWidget {
 class _TalkScreenState extends State<TalkScreen> {
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return const SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text("anonService"),
-          backgroundColor: Colors.grey,
-        ),
-        body: const Column(
+        backgroundColor: Colors.black,
+        body: Column(
           children: [
             Expanded(
               flex: 1,
               child: IntroContainer()
             ),
+            SizedBox(
+              height: 20,
+            ),
             Expanded(
-              flex: 5,
+              flex: 8,
               child: CallPlacer()
             ),
             Expanded(
-              flex: 5,
+              flex: 3,
               child: AboutContainer()
             ),
           ],
