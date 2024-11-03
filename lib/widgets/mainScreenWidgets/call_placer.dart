@@ -1,4 +1,3 @@
-import 'package:anon_service/widgets/callerWidgets/caller.dart';
 import 'package:anon_service/widgets/callerWidgets/text_placer.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +15,6 @@ class _CallPlacerState extends State<CallPlacer> {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         TextPlacer(),
-        Caller(),
       ],
     );
   }
